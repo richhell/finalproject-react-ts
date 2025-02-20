@@ -1,0 +1,116 @@
+{
+  "cart": [
+    {
+      "id": 0,
+      "productId": 2,
+      "quantity": 1
+    },
+    {
+      "id": 1,
+      "productId": 12,
+      "quantity": 1
+    },
+    {
+      "productId": 1,
+      "quantity": 1,
+      "id": 6
+    },
+    {
+      "productId": 10,
+      "quantity": 1,
+      "id": 7
+    },
+    {
+      "productId": 11,
+      "quantity": 1,
+      "id": 8
+    }
+    
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Entitlement",
+      "author": "Rumaan Alam",
+      "genre": "fiction",
+      "price": 15.99
+    },
+    {
+      "id": 2,
+      "title": "The Water Outlaws",
+      "author": "S. L. Huang",
+      "genre": "fiction",
+      "price": 12.99
+    },
+    {
+      "id": 3,
+      "title": "Hope You Are Satisfied",
+      "author": "Tania Malik",
+      "genre": "fiction",
+      "price": 14.99
+    },
+    {
+      "id": 4,
+      "title": "Carmilla",
+      "author": "Joseph Sheridan Le Fanu",
+      "genre": "fiction",
+      "price": 4.99
+    },
+    {
+      "id": 5,
+      "title": "Wide Sargasso Sea",
+      "author": "Jean Rhys",
+      "genre": "fiction",
+      "price": 9.99
+    },
+    {
+      "id": 6,
+      "title": "A Wizard of Earthsea",
+      "author": "Ursula K. Le Guin",
+      "genre": "fiction",
+      "price": 11.99
+    },
+    {
+      "id": 7,
+      "title": "In the Realm of Hungry Ghosts: Close Encounters with Addiction",
+      "author": "Gabor Maté",
+      "genre": "nonfiction",
+      "price": 13.99
+    },
+    {
+      "id": 8,
+      "title": "The Premonition",
+      "author": "Michael Lewis",
+      "genre": "nonfiction",
+      "price": 16.99
+    },
+    {
+      "id": 9,
+      "title": "The Twelve Kingdoms: Vol. 1 Sea of Shadow",
+      "author": "Fuyumi Ono",
+      "genre": "fiction",
+      "price": 10.99
+    },
+    {
+      "id": 10,
+      "title": "The Twelve Kingdoms: Vol. 2 Sea of Wind",
+      "author": "Fuyumi Ono",
+      "genre": "fiction",
+      "price": 10.99
+    },
+    {
+      "id": 11,
+      "title": "Devil in a Blue Dress",
+      "author": "Walter Mosley",
+      "genre": "fiction",
+      "price": 8.99
+    },
+    {
+      "id": 12,
+      "title": "Outlive: The Science & Art of Longevity",
+      "author": "Peter Attia with Bill Gifford",
+      "genre": "nonfiction",
+      "price": 17.99
+    }
+  ]
+}
