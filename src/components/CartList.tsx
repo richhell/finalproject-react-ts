@@ -6,18 +6,15 @@ import type { BookItem } from "../types";
 import CartItemRow from "./CartItemRow";
 const bookData = "http://localhost:3000/";
 
-type Props = {
-    cartItems: CartItem[]
-    setCartItems: (newValue: CartItem[]) => void
-    books: BookItem[]
-    
-}
-export default function CartList({ cartItems, setCartItems, books }: Props) {
+
+export default function CartList() {
+    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+    const [books, setBooks] = useState<BookItem[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<null | string>(null);
 
      useEffect( () => {
-        const asyncFunction = async () => {
+        const fetchCart = async () => {
             setLoading(true);
             try {
                 const response = await fetch(bookData + "cart");
@@ -32,13 +29,40 @@ export default function CartList({ cartItems, setCartItems, books }: Props) {
             }
             setLoading(false);
         }
-        asyncFunction();
+        fetchCart()
+
+        const fetchBooks = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch(bookData + "books");
+      
+                if (!response.ok) {
+                  setError("Uh-oh! Something went wrong. " + response.statusText);
+                } else {
+                  const data = await response.json()
+                  setBooks(data);
+                  setError(null);
+            }
+          } catch (error: any) {
+            setError("Uh-oh! Something went wrong. " + error.message);
+          }
+          setLoading(false);
+        }
+        fetchBooks();
       }, []
     
     );
 
+    // Remove a book from the cart.
+    const deleteBook = (id: number) => {
+        const updatedBooks = books.filter((book) => book.id !== id);
+        setBooks(updatedBooks);
+    };
+    
+    // Render the list of books in the cart.
     return(
         <>
+        <h4 className="display-5 mb-4">Your Cart</h4>
         {loading ? (
             <div className="spinner-container">
             <Spinner variant="primary" />
@@ -53,7 +77,8 @@ export default function CartList({ cartItems, setCartItems, books }: Props) {
                 <CartItemRow 
                 key={item.id} 
                 item={item} 
-                books={books}/>
+                books={books}
+                />
             ))}
             </tbody>
         </table>

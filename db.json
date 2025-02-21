@@ -16,19 +16,9 @@
       "id": 6
     },
     {
-      "productId": 10,
+      "productId": 4,
       "quantity": 1,
       "id": 7
-    },
-    {
-      "productId": 11,
-      "quantity": 1,
-      "id": 8
-    },
-    {
-      "productId": 3,
-      "quantity": 1,
-      "id": 9
     }
   ],
   "books": [
@@ -115,6 +105,29 @@
       "author": "Peter Attia with Bill Gifford",
       "genre": "nonfiction",
       "price": 17.99
+    }
+  ],
+  "newBooks": [
+    {
+      "id": 101,
+      "title": "I Want to Burn This Place Down: Essays",
+      "author": "Maris Kreizman",
+      "genre": "nonfiction",
+      "price": 14.99
+    },
+    {
+      "id": 102,
+      "title": "The Antidote: A Novel",
+      "author": "Karen Russell",
+      "genre": "fiction",
+      "price": 15.99
+    },
+    {
+      "id": 103,
+      "title": "Three Days in June: A Novel",
+      "author": "Anne Tyler",
+      "genre": "fiction",
+      "price": 16.99
     }
   ]
 }

@@ -1,16 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
-import type { BookItem, CartItem } from "../types";
+import type { BookItem } from "../types";
 const bookData = "http://localhost:3000/";
 
-type Props = {
-    cartItems: CartItem[]
-    setCartItems: (newValue: CartItem[]) => void
-    books: BookItem[]
-    setBooks: (newValue: BookItem[]) => void
-}
-export default function ProductList({ setCartItems, cartItems, books, setBooks }: Props) {
+export default function ProductList() {
+    const [books, setBooks] = useState<BookItem[]>([]);
       const [loading, setLoading] = useState(false);
       const [isAdding, setIsAdding] = useState(false);
       const [error, setError] = useState<null | string>(null);
@@ -20,20 +15,16 @@ export default function ProductList({ setCartItems, cartItems, books, setBooks }
   useEffect( () => {
     const asyncFunction = async () => {
       setLoading(true);
-      try {
+      
           const response = await fetch(bookData + "books");
-
           if (!response.ok) {
-            setError("Uh-oh! Something went wrong. " + response.statusText);
-          } else {
-            const data = await response.json()
-            setBooks(data);
-            setError(null);
-      }
-    } catch (error: any) {
-      setError("Uh-oh! Something went wrong. " + error.message);
-    }
-    setLoading(false);
+            throw new Error(response.statusText);
+          } 
+          const data = await response.json()
+          setBooks(data);
+      
+    
+      setLoading(false);
   }
     asyncFunction();
   }, []);
@@ -55,16 +46,15 @@ export default function ProductList({ setCartItems, cartItems, books, setBooks }
       })
       if (!response.ok) {
         setError("Uh-oh! Something went wrong. " + response.statusText);
-      } else {
-      const newlyCreatedCartItem = await response.json()
-      setCartItems( [...cartItems, newlyCreatedCartItem] )
-      }
+      } 
     } catch (error: any) {
       setError("Uh-oh! Something went wrong. " + error.message);
     }
     setIsAdding(false);
   }
     return(
+      <>
+      <h4 className="display-5 mb-4">Want Something to Read?</h4>
         <div className="d-flex flex-wrap gap-3">
         {loading && 
           <div className="spinner-container">
@@ -90,6 +80,7 @@ export default function ProductList({ setCartItems, cartItems, books, setBooks }
         }
         
         </div>
+      </>
         )
 
     
