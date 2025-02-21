@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import type { BookItem } from "./types";
-const bookData = "http://localhost:3000/";
+const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/"; //mockapi
+// const bookData = "http://localhost:3000/";
 
 export default function NewBooks() {
     const [books, setBooks] = useState<BookItem[]>([]);
@@ -13,7 +14,7 @@ export default function NewBooks() {
     const asyncFunction = async () => {
       setLoading(true);
       try {
-          const response = await fetch(bookData + "newbooks");
+          const response = await fetch(bookData + "newBooks");
 
           if (!response.ok) {
             setError("Uh-oh! Something went wrong. " + response.statusText);

@@ -7,7 +7,7 @@ type Props = {
     deleteBook: (id: number) => void
 };
 
-// formatting for each item in the customer cart.
+// formatting for each item in the customer cart, including the Remove button.
 export default function CartItemRow({ item, books, deleteBook }: Props) {
     const book = books.find(b => b.id === item.productId);
     return (

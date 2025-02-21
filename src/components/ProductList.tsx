@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import type { BookItem } from "../types";
-const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/";
+const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/"; //mockapi
 // const bookData = "http://localhost:3000"
 
 export default function ProductList() {
@@ -24,7 +24,6 @@ export default function ProductList() {
           const data = await response.json()
           setBooks(data);
       
-    
       setLoading(false);
   }
     asyncFunction();

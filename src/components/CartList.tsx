@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import type { BookItem } from "../types";
 import CartItemRow from "./CartItemRow";
-const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/";
+const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/"; //mockapi
 // const bookData = "http://localhost:3000"
 
 

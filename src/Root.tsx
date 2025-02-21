@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 export default function Root() {
   
-
   return (
     <div className="container"> 
       <ul className="nav bg-light mb-3 border-bottom" >

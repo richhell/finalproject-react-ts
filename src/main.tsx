@@ -9,6 +9,7 @@ import ProductList from './components/ProductList';
 import CartList from './components/CartList';
 import ErrorPage from './components/ErrorPage';
 
+//Paths for each page of the bookstore app.
 const router = createBrowserRouter([
     {
       path: "/",
