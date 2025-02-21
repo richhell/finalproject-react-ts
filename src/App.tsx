@@ -10,7 +10,6 @@ export default function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [books, setBooks] = useState<BookItem[]>([]);
 
-
   return (
     <div className="container mt-3"> 
       <h2 className="display-5 mb-4">Your Cart</h2>

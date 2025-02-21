@@ -24,8 +24,12 @@
       "productId": 11,
       "quantity": 1,
       "id": 8
+    },
+    {
+      "productId": 3,
+      "quantity": 1,
+      "id": 9
     }
-    
   ],
   "books": [
     {
