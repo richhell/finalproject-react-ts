@@ -6,6 +6,8 @@ type Props = {
     books: BookItem[]
     deleteBook: (id: number) => void
 };
+
+// formatting for each item in the customer cart.
 export default function CartItemRow({ item, books, deleteBook }: Props) {
     const book = books.find(b => b.id === item.productId);
     return (
@@ -14,7 +16,7 @@ export default function CartItemRow({ item, books, deleteBook }: Props) {
             <td>${book?.price.toFixed(2)} </td>
             <td>{item.quantity}</td>
             <td >
-                <button className="btn btn-outline-info btn-xs"
+                <button className="btn btn-warning btn-xs"
                 onClick={() => book && deleteBook(item.id)}
                 disabled={!book}
                 >Remove</button>

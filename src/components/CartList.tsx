@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import type { BookItem } from "../types";
 import CartItemRow from "./CartItemRow";
-const bookData = "http://localhost:3000/";
+const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/";
+// const bookData = "http://localhost:3000"
 
 
 export default function CartList() {
@@ -13,7 +14,7 @@ export default function CartList() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<null | string>(null);
 
-
+    // get the items in the cart from the database.
     const fetchCart = async () => {
         setLoading(true);
         try {
@@ -31,7 +32,7 @@ export default function CartList() {
     }
      useEffect( () => {
         fetchCart();
-
+        // get the list of books available for purchase. 
         const fetchBooks = async () => {
             setLoading(true);
             try {
@@ -93,6 +94,7 @@ export default function CartList() {
                                         deleteBook={deleteBook}
                                     />
                                 ))}
+                                <td></td>
                             </tbody>
                         </table>
 

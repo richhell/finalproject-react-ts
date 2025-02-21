@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import type { BookItem } from "../types";
-const bookData = "http://localhost:3000/";
+const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/";
+// const bookData = "http://localhost:3000"
 
 export default function ProductList() {
     const [books, setBooks] = useState<BookItem[]>([]);

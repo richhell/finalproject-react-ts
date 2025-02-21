@@ -1,29 +1,9 @@
 {
   "cart": [
     {
-      "id": 1,
-      "productId": 6,
-      "quantity": 1
-    },
-    {
-      "id": 2,
-      "productId": 7,
-      "quantity": 1
-    },
-    {
       "productId": 5,
       "quantity": 1,
       "id": 3
-    },
-    {
-      "productId": 12,
-      "quantity": 1,
-      "id": 4
-    },
-    {
-      "productId": 2,
-      "quantity": 1,
-      "id": 5
     }
   ],
   "books": [
