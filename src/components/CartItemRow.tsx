@@ -15,7 +15,7 @@ export default function CartItemRow({ item, books, deleteBook }: Props) {
             <td>{item.quantity}</td>
             <td >
                 <button className="btn btn-outline-info btn-xs"
-                onClick={() => book && deleteBook(book.id)}
+                onClick={() => book && deleteBook(item.id)}
                 disabled={!book}
                 >Remove</button>
             </td>
