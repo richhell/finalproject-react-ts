@@ -1,6 +1,6 @@
 # Final Project for Promineo Tech's Front End Software Developer Bootcamp 
 
-This project is a very basic react project for a bookstore that interacts with mockapi.io. 
+This project is a very basic a bookstore that interacts with mockapi.io. 
 A user can add books from the front page list to their cart. They can view their cart, and remove
 books from their cart. They can also view Upcoming titles. 
 
