@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import type { BookItem } from "../types";
 const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/"; //mockapi
-// const bookData = "http://localhost:3000"
+// const bookData = "http://localhost:3000/"
 
 export default function ProductList() {
     const [books, setBooks] = useState<BookItem[]>([]);
-      const [loading, setLoading] = useState(false);
-      const [isAdding, setIsAdding] = useState(false);
-      const [error, setError] = useState<null | string>(null);
+    const [loading, setLoading] = useState(false);
+    const [isAdding, setIsAdding] = useState(false);
+    const [error, setError] = useState<null | string>(null);
   
   
     // Render the list of books.
@@ -22,7 +22,9 @@ export default function ProductList() {
             throw new Error(response.statusText);
           } 
           const data = await response.json()
-          setBooks(data);
+          const currentDate = new Date();
+          const available: BookItem[] = data.filter((book: BookItem) => new Date(book.pubdate) <= currentDate);
+          setBooks(available);
       
       setLoading(false);
   }

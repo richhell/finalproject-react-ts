@@ -4,6 +4,7 @@ export type BookItem = {
     author: string
     genre: string
     price: number
+    pubdate: string
   }
 
   export type CartItem = {

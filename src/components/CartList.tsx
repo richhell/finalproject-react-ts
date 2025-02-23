@@ -5,7 +5,7 @@ import { Spinner } from "react-bootstrap";
 import type { BookItem } from "../types";
 import CartItemRow from "./CartItemRow";
 const bookData = "https://67b8cc07699a8a7baef54f13.mockapi.io/api/bookstore/"; //mockapi
-// const bookData = "http://localhost:3000"
+// const bookData = "http://localhost:3000/"
 
 
 export default function CartList() {
@@ -32,7 +32,7 @@ export default function CartList() {
     }
      useEffect( () => {
         fetchCart();
-        // get the list of books available for purchase. 
+        // Get the list of books available for purchase. 
         const fetchBooks = async () => {
             setLoading(true);
             try {
@@ -72,6 +72,10 @@ export default function CartList() {
          
     };
 
+    // Calculate the total price of the items in the cart.
+   // const totalPrice = cartItems.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0); 
+
+
     // Render the list of books in the cart.
     return (
         <>
@@ -82,8 +86,8 @@ export default function CartList() {
                 </div>
             )
                 : error ? (
-                    <p className="alert alert-danger">{error}</p>) :
-                    (
+                    <p className="alert alert-danger">{error}</p>
+                ) : (
                         <table className="table table-striped">
                             <tbody>
                                 {cartItems.map(item => (
@@ -94,7 +98,10 @@ export default function CartList() {
                                         deleteBook={deleteBook}
                                     />
                                 ))}
-                                <td></td>
+                                {/* <tr>
+                                    <td>Total: </td>
+                                    <td>${totalPrice.toFixed(2)}</td>
+                                </tr> */}
                             </tbody>
                         </table>
 

@@ -13,7 +13,7 @@ export default function Root() {
           <NavLink to="/books-cart" className="nav-link">Your Cart</NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink to="/newbooks" className="nav-link">New Books</NavLink>
+          <NavLink to="/newbooks" className="nav-link">Upcoming Releases</NavLink>
         </li>
       </ul>
       <Outlet />

@@ -10,6 +10,11 @@
   align-items: center;
 }
 
+.active {
+  color: darkblue;
+  font-weight: bold;
+}
+
 
 .card {
   padding: 2em;
